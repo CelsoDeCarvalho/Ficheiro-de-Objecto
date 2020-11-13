@@ -7,7 +7,7 @@ package com.mz.sidraTech.model;
 
 /**
  *
- * @author celso
+ * @author celso 
  */
 public class Conta {
     
@@ -15,6 +15,7 @@ public class Conta {
     private String data_cracao,data_expiro,nome_user;
     private double saldo;
     private int senha;
+    private String teste="Alterando so para fzer comit";
 
     public Conta(long numero_conta, String data_cracao, String data_expiro, String nome_user, double saldo, int senha) {
         this.numero_conta = numero_conta;
