@@ -16,16 +16,16 @@ import java.util.List;
  *
  * @author celso
  */
-public class GuardarUsuarioFicheiro {
+public class SaveFile {
     
-    public static void guardar_lista_usuarios(List<Usuario> usuarios){
+    public static void guardarListaUsuarios(List<Usuario> usuarios){
         File arquivo=new File("Usuarios.dat");
         try{
             arquivo.delete();
             arquivo.createNewFile();
-            ObjectOutputStream escritor_objecto=new ObjectOutputStream(new FileOutputStream(arquivo));
-            escritor_objecto.writeObject(usuarios);
-            escritor_objecto.close();
+            ObjectOutputStream escritor=new ObjectOutputStream(new FileOutputStream(arquivo));
+            escritor.writeObject(usuarios);
+            escritor.close();
             
         }catch(IOException e){
             System.err.println("IMPOSSIVEL GRAVAR FICHEIRO");
