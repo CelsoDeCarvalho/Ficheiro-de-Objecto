@@ -23,7 +23,7 @@ public class InitialPage {
 
             switch(choice){
                 case 1:new ListPage(); break;
-                case 2:break;
+                case 2:new RegistrationPage(); break;
                 case 3:break;
                 case 4:break;
                 case 0:{
