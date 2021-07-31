@@ -18,17 +18,19 @@ import java.util.List;
  */
 public class SaveFile {
     
-    public static void guardarListaUsuarios(List<Book> usuarios){
-        File arquivo=new File("Usuarios.dat");
+    public static void saveBooks(List<Book> books){
+        File file=new File("books.dat");
         try{
-            arquivo.delete();
-            arquivo.createNewFile();
-            ObjectOutputStream escritor=new ObjectOutputStream(new FileOutputStream(arquivo));
-            escritor.writeObject(usuarios);
-            escritor.close();
+            file.delete();
+            file.createNewFile();
+            try (ObjectOutputStream escritor = new ObjectOutputStream(new FileOutputStream(file))) {
+                escritor.writeObject(books);
+            }
             
         }catch(IOException e){
-            System.err.println("IMPOSSIVEL GRAVAR FICHEIRO");
+            System.err.println(e+" IMPOSSIVEL GRAVAR OS LIVROS");
+        }finally{
+            
         }
         
     }

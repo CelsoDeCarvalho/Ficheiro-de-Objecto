@@ -15,17 +15,17 @@ import java.util.List;
 public class ReadFile {
     
     
-    public static List<Book> lerUsuarios(){
-        List<Book> usuarios=new ArrayList();
-        File file=new File("Usuarios.dat");
+    public static List<Book> readBooks(){
+        List<Book> books=new ArrayList();
+        File file=new File("books.dat");
         try{
-            ObjectInputStream leitor=new ObjectInputStream(new FileInputStream(file));
-            usuarios=(ArrayList<Book>)leitor.readObject();
-            leitor.close();
+            try (ObjectInputStream leitor = new ObjectInputStream(new FileInputStream(file))) {
+                books=(ArrayList<Book>)leitor.readObject();
+            }
         }catch(IOException|ClassNotFoundException e){
-            System.out.println("Impossivel acessar o directorio");
+            System.err.println(e+" IMPOSSIVEL LER OS LIVROS");
         }
-        return usuarios;
+        return books;
     }
     
 }
