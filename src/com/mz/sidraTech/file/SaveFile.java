@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mz.sidraTech.controller;
+package com.mz.sidraTech.file;
 
-import com.mz.sidraTech.model.Usuario;
+import com.mz.sidraTech.model.Book;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class SaveFile {
     
-    public static void guardarListaUsuarios(List<Usuario> usuarios){
+    public static void guardarListaUsuarios(List<Book> usuarios){
         File arquivo=new File("Usuarios.dat");
         try{
             arquivo.delete();
