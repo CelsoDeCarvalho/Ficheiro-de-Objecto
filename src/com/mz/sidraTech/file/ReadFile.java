@@ -28,4 +28,9 @@ public class ReadFile {
         return books;
     }
     
+    public static boolean fileExist(){
+        File file=new File("books.dat");
+        return file.exists();
+    }
+    
 }

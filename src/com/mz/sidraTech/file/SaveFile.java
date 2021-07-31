@@ -27,6 +27,7 @@ public class SaveFile {
                 escritor.writeObject(books);
             }
             
+            System.out.println("LIVRO GRAVADO COM SUCESSO");
         }catch(IOException e){
             System.err.println(e+" IMPOSSIVEL GRAVAR OS LIVROS");
         }finally{

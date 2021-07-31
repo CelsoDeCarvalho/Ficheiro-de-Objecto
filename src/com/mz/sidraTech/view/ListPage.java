@@ -5,6 +5,7 @@
  */
 package com.mz.sidraTech.view;
 
+import com.mz.sidraTech.file.ReadFile;
 import java.util.Scanner;
 
 /**
@@ -25,10 +26,12 @@ public class ListPage {
         
         System.out.println("-----------------------------------");
         System.out.println("|            Books List            |");
-        System.out.println("-----------------------------------");
+        System.out.println("-----------------------------------\n\n\n");
+         
         
-        for(int i=0;i<0;i++){
-            System.out.println("livro");
+        for(int i=0;i<ReadFile.readBooks().size();i++){
+            System.out.println("["+(1+i)+"]----------------------------------- \n"+ReadFile.readBooks().get(i));
+            System.out.println("-----------------------------------\n\n");
         }
         
         System.out.println("SELECT A BOOK/ 0 TO QUIT");

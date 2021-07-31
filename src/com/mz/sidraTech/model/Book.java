@@ -60,7 +60,7 @@ public class Book implements Comparable<Book>,Serializable{
 
     @Override
     public String toString() {
-        return "Book{" + "author=" + author + ", title=" + title + ", manufactured_date=" + manufactured_date + ", total_pages=" + total_pages + '}';
+        return  "AUTHOR: " + author + "\nTITLE: " + title + "\nMANUFACTURED DATE: " + manufactured_date + "\nTOTAL PAGES: " + total_pages;
     }
     
     
