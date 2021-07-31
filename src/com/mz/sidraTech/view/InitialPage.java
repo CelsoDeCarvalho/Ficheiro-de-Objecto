@@ -8,36 +8,50 @@ import java.util.Scanner;
  */
 public class InitialPage {
     
-    Scanner leitor;
+    Scanner input_reader;
     
-    private void menu(){
-        leitor=new Scanner(System.in);
+    private void menu()throws InterruptedException{
+        input_reader=new Scanner(System.in);
         int choice;
         do{
             System.out.println("-----------------------------------");
             System.out.println("|          Books Manager          |");
             System.out.println("-----------------------------------");
             System.out.println("[1] LIST\n[2] ADD\n[3] UPDATE\n[4] DELETE\n[0] QUIT");
-            System.out.print("=>");
-            choice=leitor.nextInt();
+            System.out.print("=> ");
+            choice=input_reader.nextInt();
 
             switch(choice){
-                case 1:break;
+                case 1:new ListPage(); break;
                 case 2:break;
                 case 3:break;
                 case 4:break;
-                case 0:System.exit(0);break;
+                case 0:{
+                    System.out.print(".");
+                    Thread.sleep(1000);
+                    System.out.print(".");
+                    Thread.sleep(1000);
+                    System.out.print(".");
+                    Thread.sleep(1000);
+                    System.out.println("  SYSTEM TERMINATED");
+                    
+                    System.exit(0);
+                }break;
                 default:System.err.println("Invalid choice");
             }
         }while(choice!=0);
     }
     
-    public InitialPage(){
+    public InitialPage() throws InterruptedException{
         menu();
     }
     
     public static void main(String[] args) {
-        new InitialPage();
+        try{
+            new InitialPage();
+        }catch(InterruptedException ie){
+            
+        }
     }
     
 }
