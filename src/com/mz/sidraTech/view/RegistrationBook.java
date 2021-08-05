@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author De Carvalho
  */
-public class RegistrationPage {
+public class RegistrationBook {
 
     Scanner input_reader;
     private Book book;
@@ -57,7 +57,7 @@ public class RegistrationPage {
 
     }
 
-    public RegistrationPage() {
+    public RegistrationBook() {
         form();
     }
 

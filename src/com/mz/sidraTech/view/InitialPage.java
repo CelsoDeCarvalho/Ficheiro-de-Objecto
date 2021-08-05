@@ -22,10 +22,10 @@ public class InitialPage {
             choice=input_reader.nextInt();
 
             switch(choice){
-                case 1:new ListPage(); break;
-                case 2:new RegistrationPage(); break;
-                case 3:break;
-                case 4:break;
+                case 1:new ListBook(); break;
+                case 2:new RegistrationBook(); break;
+                case 3: break;
+                case 4:new DeleteBook(); break;
                 case 0:{
                     System.out.print(".");
                     Thread.sleep(1000);
